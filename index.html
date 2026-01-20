@@ -1,14 +1,146 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0" />
-    <title>Такт-кофе</title>
-    <link
-      rel="stylesheet"
-      href="./css/pages/main.css" />
-  </head>
-  <body></body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Такт-кофе — Главная</title>
+
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/components/header.css">
+  <link rel="stylesheet" href="./css/components/footer.css">
+  <link rel="stylesheet" href="./css/components/button.css">
+  <link rel="stylesheet" href="./css/components/accordion.css">
+  <link rel="stylesheet" href="./css/pages/main.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="./index.html">Такт-кофе</a>
+
+      <button class="header__burger" type="button" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </button>
+
+      <nav class="nav" data-nav>
+        <a class="nav__link" href="./index.html">Главная</a>
+        <a class="nav__link" href="./menu.html">Меню</a>
+        <a class="nav__link" href="./promotions.html">Акции</a>
+        <a class="nav__link" href="./contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1 class="hero__title">Такт-кофе</h1>
+        <p class="hero__text">Электрификация под метроном.</p>
+        <a class="button" href="./menu.html">Выбрать напиток</a>
+      </div>
+
+      <div>
+        <img
+          src="./assets/hero/main.png"
+          alt=""
+          style="width:100%; border: var(--border); border-radius: var(--radius);"
+        />
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Ответы на вопросы</h2>
+
+      <div class="accordion">
+        <div class="accordion__item">
+          <button
+            class="accordion__button"
+            aria-expanded="false"
+            aria-controls="accordion-panel-0"
+            id="accordion-button-0"
+            type="button"
+          >
+            Какая у вас обжарка?
+            <span class="accordion__icon" aria-hidden="true"></span>
+          </button>
+
+          <div
+            class="accordion__panel"
+            role="region"
+            aria-labelledby="accordion-button-0"
+            id="accordion-panel-0"
+          >
+            <div class="accordion__panel-inner">
+              <p>Стараемся держать баланс: сладость, чистота вкуса и понятная кислотность.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <button
+            class="accordion__button"
+            aria-expanded="false"
+            aria-controls="accordion-panel-1"
+            id="accordion-button-1"
+            type="button"
+          >
+            Есть ли безлактозное молоко?
+            <span class="accordion__icon" aria-hidden="true"></span>
+          </button>
+
+          <div
+            class="accordion__panel"
+            role="region"
+            aria-labelledby="accordion-button-1"
+            id="accordion-panel-1"
+          >
+            <div class="accordion__panel-inner">
+              <p>Да, есть безлактозное и растительные альтернативы.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <button
+            class="accordion__button"
+            aria-expanded="false"
+            aria-controls="accordion-panel-2"
+            id="accordion-button-2"
+            type="button"
+          >
+            Можно ли навынос?
+            <span class="accordion__icon" aria-hidden="true"></span>
+          </button>
+
+          <div
+            class="accordion__panel"
+            role="region"
+            aria-labelledby="accordion-button-2"
+            id="accordion-panel-2"
+          >
+            <div class="accordion__panel-inner">
+              <p>Да, конечно. С собой — без проблем.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© Такт-кофе</div>
+      <nav class="footer__nav">
+        <a href="./menu.html">Меню</a>
+        <a href="./promotions.html">Акции</a>
+        <a href="./contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="./js/header.js" defer></script>
+  <script src="./js/accordion.js" defer></script>
+</body>
 </html>

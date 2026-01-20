@@ -1,0 +1,47 @@
+.carousel {
+  position: relative;
+  padding: 24px 0;
+}
+
+.carousel__viewport {
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel__track {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.carousel__slide {
+  min-width: 100%;
+  flex-shrink: 0;
+}
+
+.carousel__controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.carousel__bullets {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.carousel__bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--muted);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.carousel__bullet--active {
+  background-color: var(--accent);
+}

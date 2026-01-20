@@ -1,14 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0" />
-    <title>Меню</title>
-    <link
-      rel="stylesheet"
-      href="./css/pages/menu.css" />
-  </head>
-  <body></body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Такт-кофе — Меню</title>
+
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/components/header.css">
+  <link rel="stylesheet" href="./css/components/footer.css">
+  <link rel="stylesheet" href="./css/components/button.css">
+  <link rel="stylesheet" href="./css/components/card.css">
+  <link rel="stylesheet" href="./css/pages/menu.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="./index.html">Такт-кофе</a>
+
+      <button class="header__burger" type="button" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </button>
+
+      <nav class="nav" data-nav>
+        <a class="nav__link" href="./index.html">Главная</a>
+        <a class="nav__link" href="./menu.html">Меню</a>
+        <a class="nav__link" href="./promotions.html">Акции</a>
+        <a class="nav__link" href="./contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 style="margin:24px 0 8px;">Меню</h1>
+
+    <nav class="menu-nav" aria-label="Категории меню">
+      <a href="#espresso">Эспрессо-бар</a>
+      <a href="#filter">Фильтр</a>
+      <a href="#signature">Авторские</a>
+      <a href="#cold">Холодные</a>
+    </nav>
+
+    <section id="espresso" style="padding: 16px 0;">
+      <h2 style="margin:0 0 12px;">Эспрессо-бар</h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <img class="card__img" src="./assets/menu/espresso.png" alt="Эспрессо">
+          <div class="card__body">
+            <h3 class="card__title">Эспрессо</h3>
+            <p class="card__meta">30 мл</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card__img" src="./assets/menu/americano.png" alt="Американо">
+          <div class="card__body">
+            <h3 class="card__title">Американо</h3>
+            <p class="card__meta">200 мл</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card__img" src="./assets/menu/cappuccino.png" alt="Капучино">
+          <div class="card__body">
+            <h3 class="card__title">Капучино</h3>
+            <p class="card__meta">250 мл</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card__img" src="./assets/menu/latte.png" alt="Латте">
+          <div class="card__body">
+            <h3 class="card__title">Латте</h3>
+            <p class="card__meta">300 мл</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="filter" style="padding: 16px 0;">
+      <h2 style="margin:0 0 12px;">Фильтр</h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <img class="card__img" src="./assets/menu/filter.png" alt="Фильтр-кофе">
+          <div class="card__body">
+            <h3 class="card__title">Фильтр-кофе</h3>
+            <p class="card__meta">250 мл</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="signature" style="padding: 16px 0;">
+      <h2 style="margin:0 0 12px;">Авторские</h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <img class="card__img" src="./assets/menu/espresso.png" alt="Эспрессо-тоник">
+          <div class="card__body">
+            <h3 class="card__title">Эспрессо-тоник</h3>
+            <p class="card__meta">300 мл</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="cold" style="padding: 16px 0;">
+      <h2 style="margin:0 0 12px;">Холодные</h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <img class="card__img" src="./assets/menu/coldbrew.png" alt="Колдбрю">
+          <div class="card__body">
+            <h3 class="card__title">Колдбрю</h3>
+            <p class="card__meta">250 мл</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© Такт-кофе</div>
+      <nav class="footer__nav">
+        <a href="./menu.html">Меню</a>
+        <a href="./promotions.html">Акции</a>
+        <a href="./contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="./js/header.js" defer></script>
+</body>
 </html>

@@ -1,14 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0" />
-    <title>Акции</title>
-    <link
-      rel="stylesheet"
-      href="./css/pages/promotions.css" />
-  </head>
-  <body></body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Такт-кофе — Акции</title>
+
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/components/header.css">
+  <link rel="stylesheet" href="./css/components/footer.css">
+  <link rel="stylesheet" href="./css/components/button.css">
+  <link rel="stylesheet" href="./css/components/carousel.css">
+  <link rel="stylesheet" href="./css/pages/promotions.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="./index.html">Такт-кофе</a>
+
+      <button class="header__burger" type="button" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </button>
+
+      <nav class="nav" data-nav>
+        <a class="nav__link" href="./index.html">Главная</a>
+        <a class="nav__link" href="./menu.html">Меню</a>
+        <a class="nav__link" href="./promotions.html">Акции</a>
+        <a class="nav__link" href="./contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="promo-title">Акции</h1>
+
+    <section class="carousel" data-carousel>
+      <div class="carousel__viewport">
+        <div class="carousel__track" data-carousel-track>
+          <article class="carousel__slide" data-carousel-slide>
+            <img
+              src="./assets/promotions/promo-1.png"
+              alt="Утренний темп — скидка 20%"
+              style="width:100%; border-radius: var(--radius); border: var(--border);"
+            >
+            <h2 style="margin:12px 0 6px;">Утренний темп — 20%</h2>
+            <p style="margin:0; color:var(--muted);">Скидка на напитки до 12:00.</p>
+          </article>
+
+          <article class="carousel__slide" data-carousel-slide>
+            <img
+              src="./assets/promotions/promo-2.png"
+              alt="Второй напиток дешевле"
+              style="width:100%; border-radius: var(--radius); border: var(--border);"
+            >
+            <h2 style="margin:12px 0 6px;">Второй напиток дешевле</h2>
+            <p style="margin:0; color:var(--muted);">Возьми два — и приятнее.</p>
+          </article>
+
+          <article class="carousel__slide" data-carousel-slide>
+            <img
+              src="./assets/promotions/promo-3.png"
+              alt="Авторский напиток недели"
+              style="width:100%; border-radius: var(--radius); border: var(--border);"
+            >
+            <h2 style="margin:12px 0 6px;">Авторский напиток недели</h2>
+            <p style="margin:0; color:var(--muted);">Каждую неделю — новый вкус.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="carousel__controls">
+        <button class="button button--ghost" type="button" data-carousel-prev>Назад</button>
+        <button class="button" type="button" data-carousel-next>Вперёд</button>
+      </div>
+
+      <div class="carousel__bullets" data-carousel-bullets aria-label="Переключатели слайдов"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© Такт-кофе</div>
+      <nav class="footer__nav">
+        <a href="./menu.html">Меню</a>
+        <a href="./promotions.html">Акции</a>
+        <a href="./contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="./js/header.js" defer></script>
+  <script src="./js/carousel.js" defer></script>
+</body>
 </html>

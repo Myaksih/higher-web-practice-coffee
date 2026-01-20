@@ -1,14 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0" />
-    <title>Контакты</title>
-    <link
-      rel="stylesheet"
-      href="./css/pages/contacts.css" />
-  </head>
-  <body></body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Такт-кофе — Контакты</title>
+
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/components/header.css">
+  <link rel="stylesheet" href="./css/components/footer.css">
+  <link rel="stylesheet" href="./css/components/button.css">
+  <link rel="stylesheet" href="./css/components/accordion.css">
+  <link rel="stylesheet" href="./css/pages/contacts.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="./index.html">Такт-кофе</a>
+
+      <button class="header__burger" type="button" aria-label="Открыть меню" aria-expanded="false" data-burger>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+        <span class="header__burger-line"></span>
+      </button>
+
+      <nav class="nav" data-nav>
+        <a class="nav__link" href="./index.html">Главная</a>
+        <a class="nav__link" href="./menu.html">Меню</a>
+        <a class="nav__link" href="./promotions.html">Акции</a>
+        <a class="nav__link" href="./contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 style="margin:24px 0 12px;">Контакты</h1>
+
+    <section class="contacts-grid">
+      <div>
+        <img
+          class="map-placeholder"
+          src="./assets/contacts/map.png"
+          alt="Схема проезда к кофейне"
+          style="width:100%; border-radius: var(--radius); border: var(--border);"
+        >
+      </div>
+
+      <div>
+        <h2 style="margin:0 0 10px;">Адрес</h2>
+        <p style="margin:0 0 10px; color:var(--muted);">г. Москва, ул. Примерная, 1</p>
+
+        <h2 style="margin:16px 0 10px;">Часы работы</h2>
+        <p style="margin:0 0 10px; color:var(--muted);">Пн–Пт 08:00–20:00, Сб–Вс 10:00–22:00</p>
+
+        <h2 style="margin:16px 0 10px;">Связь</h2>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="button" href="tel:+79995555555">Позвонить</a>
+          <a class="button button--ghost" href="https://yandex.ru/maps" target="_blank" rel="noopener noreferrer">
+            Открыть в картах
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:24px 0;">
+      <h2 style="margin:0 0 12px;">Ответы на вопросы</h2>
+
+      <div class="accordion">
+        <div class="accordion__item">
+          <button
+            class="accordion__button"
+            aria-expanded="false"
+            aria-controls="c-accordion-panel-0"
+            id="c-accordion-button-0"
+            type="button"
+          >
+            Можно ли с питомцами?
+            <span class="accordion__icon" aria-hidden="true"></span>
+          </button>
+
+          <div
+            class="accordion__panel"
+            role="region"
+            aria-labelledby="c-accordion-button-0"
+            id="c-accordion-panel-0"
+          >
+            <div class="accordion__panel-inner">
+              <p>Да, если питомец спокойный и на поводке/в переноске.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <button
+            class="accordion__button"
+            aria-expanded="false"
+            aria-controls="c-accordion-panel-1"
+            id="c-accordion-button-1"
+            type="button"
+          >
+            Есть ли Wi-Fi?
+            <span class="accordion__icon" aria-hidden="true"></span>
+          </button>
+
+          <div
+            class="accordion__panel"
+            role="region"
+            aria-labelledby="c-accordion-button-1"
+            id="c-accordion-panel-1"
+          >
+            <div class="accordion__panel-inner">
+              <p>Да, бесплатный Wi-Fi для гостей.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© Такт-кофе</div>
+      <nav class="footer__nav">
+        <a href="./menu.html">Меню</a>
+        <a href="./promotions.html">Акции</a>
+        <a href="./contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="./js/header.js" defer></script>
+  <script src="./js/accordion.js" defer></script>
+</body>
 </html>
